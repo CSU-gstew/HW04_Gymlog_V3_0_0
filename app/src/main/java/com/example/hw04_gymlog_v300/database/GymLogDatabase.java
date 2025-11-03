@@ -20,9 +20,9 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 @TypeConverters(LocalDateTypeConverter.class)
-@Database(entities = {GymLog.class, User.class}, version = 4, exportSchema = false)
+@Database(entities = {GymLog.class, User.class}, version = 6, exportSchema = false)
 public abstract class GymLogDatabase extends RoomDatabase {
-    public static final String USER_TABLE = "usertable";
+    public static final String USER_TABLE = "userTable";
     private static final String DATABASE_NAME = "GymLogDatabase";
     public static final String GYM_LOG_TABLE = "gymLogTable";
 
