@@ -1,3 +1,5 @@
+import org.gradle.kotlin.dsl.annotationProcessor
+
 plugins {
     alias(libs.plugins.android.application)
 }
@@ -36,6 +38,9 @@ android {
 
 }
 
+
+val room_version = "2.4.3"
+
 dependencies {
 
     implementation(libs.appcompat)
@@ -45,7 +50,10 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
-
-    implementation(libs.room.runtime)
+    implementation (libs.room.runtime)
     annotationProcessor( libs.room.compiler)
+//    implementation("androidx.room:room-runtime:$roomVersion")
+//    annotationProcessor("androidx.room:room-compiler:$roomVersion")
+
+
 }
