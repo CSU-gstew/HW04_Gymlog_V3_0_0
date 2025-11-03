@@ -31,7 +31,7 @@ public class GymLogRepository {
                 new Callable<GymLogRepository>() {
                     @Override
                     public GymLogRepository call() throws Exception {
-                        repository = new GymLogRepository(application);
+                        return new GymLogRepository(application);
                     }
                 }
         );
